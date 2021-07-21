@@ -67,6 +67,7 @@ GEM
     autoprefixer-rails (10.2.5.1)
       execjs (> 0)
     backport (1.2.0)
+    bcrypt (3.1.13)
     benchmark (0.1.1)
     bindex (0.8.1)
     bootsnap (1.7.2)
@@ -298,6 +299,7 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
+  bcrypt (= 3.1.13)
   bootsnap (= 1.7.2)
   bootstrap-sass (= 3.4.1)
   byebug (= 11.1.3)
