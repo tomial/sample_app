@@ -1,9 +1,6 @@
 require 'test_helper'
 
 class UserSignupTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
   test 'invalid signup information' do
     get signup_path
 
@@ -16,14 +13,14 @@ class UserSignupTest < ActionDispatch::IntegrationTest
 
     assert_template 'users/new'
 
-    assert_select 'div#<CSS id for error explanation>'
-    assert_select 'div.<CSS class for field with error>'
+    assert_select 'div#error_explanation'
+    assert_select 'div.alert.alert-danger'
   end
 
   test 'valid signup information' do
     get signup_path
     assert_difference 'User.count', 1 do
-      post user_path, params: { user: { name: "Example User",
+      post users_path, params: { user: { name: "Example User",
                                         email: 'user@example.com',
                                         password: 'password',
                                         password_confirmation: 'password' } }
@@ -31,6 +28,6 @@ class UserSignupTest < ActionDispatch::IntegrationTest
 
     follow_redirect!
     assert_template 'users/show'
-    assert_not flash.
+    assert is_logged_in?
   end
 end
