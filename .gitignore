@@ -42,3 +42,4 @@ yarn-debug.log*
 
 # Mac File
 .DS_Store
+bin
