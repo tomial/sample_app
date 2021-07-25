@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb131990-0d4b-4f43-b6f1-5a988b654e38" name="Default Changelist" comment="Finish layout and routes">
+      <change afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sample_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sample_app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
@@ -14,19 +16,7 @@
       <change beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/webpack/environment.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/environment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/development.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/test.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/test.sqlite3-0" beforeDir="false" afterPath="$PROJECT_DIR$/db/test.sqlite3-0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/test.sqlite3-1" beforeDir="false" afterPath="$PROJECT_DIR$/db/test.sqlite3-1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/test.sqlite3-2" beforeDir="false" afterPath="$PROJECT_DIR$/db/test.sqlite3-2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/test.sqlite3-3" beforeDir="false" afterPath="$PROJECT_DIR$/db/test.sqlite3-3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/test.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/packs-test/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/packs-test/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/packs/js/application-e421b4aa3f716bebdab1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/packs/js/application-e421b4aa3f716bebdab1.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/packs/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/packs/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/integration/users_login_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/integration/users_login_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_helper.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
@@ -323,7 +313,7 @@
       <workItem from="1627109998045" duration="245000" />
       <workItem from="1627180562027" duration="10000" />
       <workItem from="1627181526172" duration="5000" />
-      <workItem from="1627181568502" duration="12111000" />
+      <workItem from="1627181568502" duration="14864000" />
     </task>
     <servers />
   </component>
