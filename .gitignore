@@ -40,6 +40,10 @@
 yarn-debug.log*
 .yarn-integrity
 
+Gemfile.lock
+/.idea
+
+
 # Mac File
 .DS_Store
 bin
