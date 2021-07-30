@@ -33,6 +33,7 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
+
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -64,6 +65,7 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+
   &:hover {
     color: #fff;
     text-decoration: none;
@@ -91,6 +93,7 @@ footer {
     ul {
       float: none;
       padding: 0;
+
       li {
         float: none;
         margin-left: 0;
@@ -139,15 +142,17 @@ $gray-medium-light: #eaeaea;
 }
 
 /* sidebar */
-aside { section.user_info {
-  margin-top: 20px;
-}
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+
   section {
     padding: 10px 0;
     margin-top: 20px;
 
     &:first-child {
-    border: 0;
+      border: 0;
       padding-top: 0;
     }
 
@@ -158,11 +163,11 @@ aside { section.user_info {
     }
 
     h1 {
-        font-size: 1.4em;
-        text-align: left;
-        letter-spacing: -1px;
-        margin-bottom: 3px;
-        margin-top: 0px;
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
     }
   }
 }
@@ -189,7 +194,8 @@ input {
 }
 
 #error_explanation {
-    color: red;
+  color: red;
+
   ul {
     color: red;
     margin: 0 0 30px 0;
@@ -198,6 +204,7 @@ input {
 
 .field_with_errors {
   @extend .has-error;
+
   .form-control {
     color: $state-danger-text;
   }
@@ -206,6 +213,7 @@ input {
 .checkbox {
   margin-top: -10px;
   margin-bottom: 10px;
+
   span {
     margin-left: 20px;
     font-weight: normal;
@@ -221,6 +229,7 @@ input {
 .users {
   list-style: none;
   margin: 0;
+
   li {
     overflow: auto;
     padding: 10px 0;
@@ -229,31 +238,107 @@ input {
 }
 
 /* microposts */
-.microposts { list-style: none; padding: 0;
-  li{
+.microposts {
+  list-style: none;
+  padding: 0;
+
+  li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
   }
-  .user { margin-top: 5em; padding-top: 0;
-  } .content {
-      display: block; margin-left: 60px; img {
-    display: block;
-    padding: 5px 0;
+
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
   }
-    } .timestamp {
-        color: $gray-light;
-        display: block;
-        margin-left: 60px;
-      } .gravatar {
-          float: left;
-          margin-right: 10px;
-          margin-top: 5px;
-        } }
-aside { textarea {
-  height: 100px;
-  margin-bottom: 5px;
+
+  .content {
+    display: block;
+    margin-left: 60px;
+
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
 }
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
 }
-span.image { margin-top: 10px; input {
-  border: 0; }
+
+span.image {
+  margin-top: 10px;
+
+  input {
+    border: 0;
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+
+  .gravatar {
+    margin: 1px 1px;
+  }
+
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
 }

@@ -2,6 +2,14 @@ class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token, :reset_token
 
   has_many :microposts, dependent: :destroy
+  has_many :active_relationships, class_name: 'Relationship',
+                                  foreign_key: 'follower_id',
+                                  dependent: :destroy
+  has_many :passive_relationships, class_name: 'Relationship',
+                                   foreign_key: 'followed_id',
+                                   dependent: :destroy
+  has_many :following, through: :active_relationships, source: 'followed'
+  has_many :followers, through: :passive_relationships
 
   before_save :downcase_email
   before_create :create_activation_digest
@@ -84,7 +92,22 @@ class User < ApplicationRecord
 
   # 实现动态流
   def feed
-    Micropost.where('user_id = ? ', id)
+    following_ids = 'SELECT followed_id FROM relationships WHERE follower_id = :user_id'
+    Micropost.where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: id)
+             .distinct
+             .includes(:user, image_attachment: :blob)
+  end
+
+  def follow(another_user)
+    following << another_user unless self == another_user
+  end
+
+  def unfollow(another_user)
+    following.delete(another_user)
+  end
+
+  def following?(another_user)
+    following.include?(another_user)
   end
 
   private

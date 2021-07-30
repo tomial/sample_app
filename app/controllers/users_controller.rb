@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   # 判断是否登陆
-  before_action :logged_in_user, only: %i[index edit update destroy]
+  before_action :logged_in_user, only: %i[index edit update destroy following followers]
   # 判断访问的是否当前用户页面
   before_action :correct_user, only: %i[edit update]
   # 删除前判断是否管理员
@@ -51,6 +51,20 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def following
+    @title = 'Following'
+    @user = User.find(params[:id])
+    @users = @user.following.paginate(page: params[:page])
+    render 'show_follow'
+  end
+
+  def followers
+    @title = 'Followers'
+    @user = User.find(params[:id])
+    @users = @user.followers.paginate(page: params[:page])
+    render 'show_follow'
   end
 
   private
