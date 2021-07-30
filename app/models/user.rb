@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token, :reset_token
 
+  has_many :microposts, dependent: :destroy
+
   before_save :downcase_email
   before_create :create_activation_digest
 
@@ -78,6 +80,11 @@ class User < ApplicationRecord
 
   def remove_reset_digest
     update_attribute(:reset_digest, nil)
+  end
+
+  # 实现动态流
+  def feed
+    Micropost.where('user_id = ? ', id)
   end
 
   private
